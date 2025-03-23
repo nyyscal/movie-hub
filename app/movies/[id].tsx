@@ -40,8 +40,8 @@ const MovieDetails = () => {
       <MovieInfo label="Overview" value={movie?.overview}/>
       <MovieInfo label="Genres" value={movie?.genres?.map((g)=>g.name).join("-") || "N/A"}/>
         <View className='flex flex-row justify-between w-1/2'>
-        <MovieInfo label='Budget' value={`$${movie?.budget / 1_000_000}millions`}/>
-        <MovieInfo label='Revenus' value={`$${Math.round(movie?.revenue)/1000000}`}/></View>
+        <MovieInfo label='Budget' value={`$${movie?.budget / 1_000_000} millions`}/>
+        <MovieInfo label='Revenus' value={`$${Math.round(movie?.revenue)/1000000} millions`}/></View>
     <MovieInfo label='Production Company' value={movie?.production_companies.map((c)=>c.name).join("-") ||"N/A"}/>
     </View>
      </ScrollView>
