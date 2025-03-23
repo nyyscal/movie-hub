@@ -32,12 +32,15 @@ export default function Index() {
           <Text>Error:{moviesError?.message || trendingError?.message}</Text>
         ):(
           <View className="flex-1 mt-5">
+            
           <SearchBar 
           onPress={()=> router.push("/search")}
           placeholder="Search for your favourite movie"/>
+
           {trendingMovies && (
             <View className="mt-10">
               <Text className="text-lg text-white font-bold mb-3">Trending Movies</Text>
+
               <FlatList 
               horizontal
               showsHorizontalScrollIndicator={false}
@@ -49,6 +52,7 @@ export default function Index() {
               )}
               keyExtractor={(item)=>item.movie_id.toString()}
               />
+
             </View>
           )}
           <>
